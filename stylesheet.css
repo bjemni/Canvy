@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 768px) {
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #000000;
+}
+
+.Title {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+/*placering af ikoner i top*/
+.ikoner {
+    align-items: center;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 50x;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding-top: 20px;
+}
+
+.custom-icon {
+    font-size: 20px; /* Juster størrelsen af ikonerne efter behov */
+    margin-left: 10px; /* Tilføj lidt margin til at adskille ikonerne fra teksten */
+    color: #000; /* Juster farven efter behov */
+}
+
+/*hvordan top menu er placeret*/
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-items: centert;
+    margin-top: 60px; /* Juster topmarginen efter behov */
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+.overlay-box {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    height: 100%;
+    width: 30%; /* Bredden af den hvide boks (halvdelen af header-right's bredde) */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+    pointer-events: none; /* Gør boksen gennemsigtig for klik */
+}
+
+.arrow {
+    color: black; /* Farve på pilen */
+    font-size: 24px; /* Størrelse på pilen */
+}
+
+
+.filters span {
+    margin-bottom: 10px; /* Tilføj lidt afstand mellem hver filter */
+    margin-right: 20px;
+    font-size: 16px; /* Juster størrelsen af filterteksten efter behov */
+    color: #000; /* Juster farven efter behov */
+    font-size: 15px;
+}
+
+
+/* den hvideboks i højre side  */
+.grid-item {
+    position: relative;
+    overflow: hidden; /* Sørg for at billedet ikke stikker ud af gitterelementet */
+}
+
+/* Billede i gitteret */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Skaler billede til at dække hele gitterelementet */
+}
+
+
+/* Grid container */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Mellemrum mellem gitterelementer */
+    margin-top: 20px; /* Margin øverst for at undgå overlapning med header */
+}
+
+/* Mellemrum mellem billeder og bestemt at der er 3 billeder på hver række */
+.grid-item {
+    flex: 1 0 calc(33.33% - 10px); /* Beregnet bredde til 3 kolonner med mellemrum */
+    overflow: hidden; /* Sørg for at billedet ikke stikker ud af gitterelementet */
+}
+
+/* Billede i gitteret */
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Skaler billede til at dække hele gitterelementet */
+}
+
+/* Placering af Bundmenu */
+.bottom-menu {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Juster højden efter behov */
+    background-color: #ffffff; /* Hvid baggrundfarve */
+    display: flex;
+    justify-content: space-evenly; /* Ligeligt mellemrum mellem elementer */
+    align-items: center;
+}
+
+/*knapper*/
+.bottom-menu button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    bottom: 0;
+}
+
+/* billeder i bund menu*/
+.bottom-menu img {
+    width: 60px; /* Juster størrelsen af billederne*/
+    height: 60px;
+    padding-bottom: 0;
+}
